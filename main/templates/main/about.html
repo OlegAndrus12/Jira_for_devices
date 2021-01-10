@@ -19,22 +19,14 @@ About us
                   <th scope="col">Last</th>
                 </tr>
               </thead>
+              {% for user in users %}
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
+                  <th scope="row">{{forloop.counter}}</th>
+                  <td>{{user.username}}</td>
+                  <td>{{user.role}}</td>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                </tr>
+                {% endfor %}
               </tbody>
             </table>
           </div>
